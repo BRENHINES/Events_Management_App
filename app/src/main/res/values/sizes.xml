@@ -16,7 +16,7 @@
     <dimen name="text_size_extra_medium">36dp</dimen>
     <dimen name="text_size_large">24dp</dimen>
     <dimen name="text_size_medium">20dp</dimen>
-    <dimen name="text_size_small">16dp</dimen>
+    <dimen name="text_size_small">16sp</dimen>
     <dimen name="text_size_normal">24dp</dimen>
     <dimen name="text_size_extra_small">20dp</dimen>
 
