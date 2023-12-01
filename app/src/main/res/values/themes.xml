@@ -1,8 +1,18 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.Events" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    <style name="Base.Theme.Events" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <!-- App theme custom. -->
+        <item name="windowActionBar">true</item>
+        <item name="android:colorBackground">@color/white</item>
+        <item name="android:statusBarColor">@color/background_container</item>
+
+        <!-- Button theme. -->
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">48dp</item>
+        <item name="android:textSize">16sp</item>
+
+        <!-- Icon theme. -->
+        <item name="android:logo">@drawable/logo_dark</item>
     </style>
 
     <style name="Theme.Events" parent="Base.Theme.Events" />
