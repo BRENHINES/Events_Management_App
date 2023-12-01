@@ -15,19 +15,22 @@
     <string name="hello_subtitle">Welcome back, you have been missed.</string>
     <string name="google_sign_in">Sign In with Google</string>
     <string name="apple_sign_in">Sign In with Apple</string>
+    <string name="password_sign_in">Sign In with password</string>
     <string name="google_sign_up">Sign Up with Google</string>
     <string name="do_not_have_account">Do not have an account ?</string>
     <string name="sign_in">Sign In</string>
     <string name="login">Log In</string>
+    <string name="login_account">Log In to your Account</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
-    <string name="forget_password">Forgot Password?</string>
+    <string name="forget_password">Forgot Password ?</string>
     <string name="change_password">Your have successfully changed your password</string>
+    <string name="have_not_account">You do not already have an account ?</string>
 
     <string name="or">Or</string>
 
     <!--Sign up-->
-    <string name="create_account">Create an account</string>
+    <string name="create_account">Create an Account</string>
     <string name="started">Let us Get Started</string>
     <string name="started_subtitle">Sign up or login to start in the app.</string>
     <string name="email_continue">Continue with Email</string>
@@ -90,4 +93,6 @@
     <string name="background_description">Image that it is on the background.</string>
     <string name="background_image">Image for the bottom of the page</string>
     <string name="login_background_image">Image for login page</string>
+    <string name="left_arrow_description">Arrow icon to back on the previous page</string>
+    <string name="or_continue">Or continue with</string>
 </resources>

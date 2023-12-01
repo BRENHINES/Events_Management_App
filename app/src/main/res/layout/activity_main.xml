@@ -8,19 +8,7 @@
     tools:context=".presentation.MainActivity">
 
     <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:contentDescription="@string/background_description"
-        android:layout_marginBottom="-300dp"
-        android:rotation="90"
-        android:src="@drawable/background"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
-
-    <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/let_you_in_image"
         android:layout_width="220dp"
         android:layout_height="220dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -31,10 +19,10 @@
         app:srcCompat="@drawable/login_rafiki"/>
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/let_you_in_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Let's you in"
+        android:text="@string/let_you"
         android:textColor="@color/white"
         android:layout_marginTop="315dp"
         android:textSize="@dimen/text_title_margin"
@@ -43,11 +31,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/google_button"
+        android:id="@+id/google_sign_in"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:paddingHorizontal="16dp"
+        android:layout_marginTop="40dp"
+        android:paddingHorizontal="@dimen/button_width"
         android:layout_marginHorizontal="20dp"
         android:drawableStart="@drawable/google"
         android:textAllCaps="false"
@@ -59,17 +47,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"/>
+        app:layout_constraintTop_toBottomOf="@+id/let_you_in_text"/>
 
     <Button
-        android:id="@+id/apple_button"
+        android:id="@+id/apple_sign_in"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="15dp"
         android:height="55dp"
         android:background="@drawable/button_background"
-        android:paddingHorizontal="16dp"
+        android:paddingHorizontal="@dimen/button_width"
+        android:drawableStart="@drawable/apple"
         android:text="@string/apple_sign_in"
         android:textAllCaps="false"
         android:textColor="@color/white"
@@ -77,30 +66,32 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/google_button" />
+        app:layout_constraintTop_toBottomOf="@+id/google_sign_in" />
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="55dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="10dp"
+        android:gravity="center|center_vertical"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="20dp"
-        android:layout_marginHorizontal="20dp"
-        android:orientation="horizontal"
-        android:gravity="center|center_vertical"
-        app:layout_constraintTop_toBottomOf="@+id/apple_button">
+        app:layout_constraintTop_toBottomOf="@+id/apple_sign_in">
 
         <View
             android:layout_width="150dp"
             android:layout_height="3dp"
-            android:background="@color/grey"/>
+            android:background="@color/grey" />
 
         <TextView
+            android:id="@+id/or"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
             android:text="@string/or"
             android:textColor="@color/grey"
-            android:layout_marginHorizontal="15dp"
             android:textSize="@dimen/text_size_medium"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -109,7 +100,58 @@
         <View
             android:layout_width="150dp"
             android:layout_height="3dp"
-            android:background="@color/grey"/>
+            android:background="@color/grey" />
     </LinearLayout>
+
+    <Button
+        android:id="@+id/Sign_in_with_password"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginHorizontal="20dp"
+        android:background="@drawable/btn_action_background"
+        android:text="@string/password_sign_in"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/margin_top_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Sign_in_with_password">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/do_not_have_account"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_small"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_up"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/purple_button_background"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/bottom_background_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/background_description"
+        android:layout_marginBottom="-310dp"
+        android:rotation="90"
+        android:src="@drawable/background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
