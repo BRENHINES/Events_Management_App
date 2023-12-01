@@ -95,4 +95,6 @@
     <string name="login_background_image">Image for login page</string>
     <string name="left_arrow_description">Arrow icon to back on the previous page</string>
     <string name="or_continue">Or continue with</string>
+    <string name="username">username</string>
+    <string name="confirm_password">Confirm password</string>
 </resources>
